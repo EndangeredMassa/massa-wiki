@@ -2,8 +2,7 @@ fs = require 'fs'
 path = require 'path'
 
 module.exports = (rootPath, relativePath, body, query, url, callback) ->
-  localPath = path.join '..', 'public', relativePath
-  selectedFile = path.resolve "#{__dirname}/../#{localPath}"
+  selectedFile = path.join rootPath, relativePath
 
   content = body.content?.replace(/\r?\n/g, '\n')
 

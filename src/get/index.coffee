@@ -18,8 +18,7 @@ requireTemplate = (file) ->
   requireFile("#{__dirname}/#{file}")
 
 module.exports = (rootPath, relativePath, query, callback) ->
-  localPath = path.join '..', 'public', relativePath
-  absolutePath = path.resolve "#{__dirname}/../#{localPath}"
+  absolutePath = path.join rootPath, relativePath
 
   selectedFile = null
   selectedDir = absolutePath

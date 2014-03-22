@@ -5,11 +5,11 @@ markdown wiki.
 Existing tools were too complex
 and/or too broken to for my use.
 
-Right now, this has to be cloned somewhere,
-run with `npm start`,
-and then it serves
-markdown from `./public`.
+```coffeescript
+wiki = require 'massa-wiki'
 
-## todo
+docPath = "#{__dirname}/docs"
+port = 8000
+wiki.start port, docPath
+```
 
-* turn this into a module
