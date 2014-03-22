@@ -1,0 +1,16 @@
+{
+  "name": "massa-wiki",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/coffee src/index.coffee"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script-redux": "2.0.0-beta7",
+    "express": "^3.5.0",
+    "facile": "^1.0.1",
+    "cheerio": "~0.13.1",
+    "marked": "~0.3.2"
+  }
+}
