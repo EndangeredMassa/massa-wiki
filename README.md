@@ -16,13 +16,13 @@ wiki.start port, docPath
 The code found herein isn't great.
 Use it at your own risk!
 
-# todo
+## todo
 
 - sort dirs/files (dirs first, then files; alpha sort)
 - autoselect index.md when navigating to a dir
 - fix error when creating new file at root (navigates without root url)
 - auto git commit + git push
 
-# license
+## license
 
 [MIT](LICENSE)
