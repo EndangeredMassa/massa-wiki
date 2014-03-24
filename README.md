@@ -13,6 +13,9 @@ port = 8000
 wiki.start port, docPath
 ```
 
+The code found herein isn't great.
+Use it at your own risk!
+
 # todo
 
 - sort dirs/files (dirs first, then files; alpha sort)
