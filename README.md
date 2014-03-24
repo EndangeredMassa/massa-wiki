@@ -23,3 +23,6 @@ Use it at your own risk!
 - fix error when creating new file at root (navigates without root url)
 - auto git commit + git push
 
+# license
+
+[MIT](LICENSE)
