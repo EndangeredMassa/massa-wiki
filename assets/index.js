@@ -1,3 +1,10 @@
+var $ = function(selector){
+  return document.querySelector(selector);
+};
+var $$ = function(selector){
+  return document.querySelectorAll(selector);
+};
+
 
 marked.setOptions({
   gfm: true,
@@ -23,18 +30,23 @@ var debounce = function(wait, func, immediate) {
 };
 
 var highlight = function(){
-  var blocks = document.querySelectorAll('pre code');
+  var blocks = $$('pre code');
   Array.prototype.forEach.call(blocks, hljs.highlightBlock);
 };
 
+var textbox = $('.file');
+var preview = $('.filePreview');
 
-var textbox = document.querySelector('.file');
-var preview = document.querySelector('.filePreview');
+var resize = function(){
+  textbox.style.height = window.getComputedStyle(preview).height;
+};
 
 document.onkeyup = debounce(200, function(){
   var markdown = textbox.value;
   var rendered = marked(markdown);
   preview.innerHTML = rendered;
   highlight();
+  resize();
 });
 
+resize();
