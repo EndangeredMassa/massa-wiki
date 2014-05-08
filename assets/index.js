@@ -37,16 +37,10 @@ var highlight = function(){
 var textbox = $('.file');
 var preview = $('.filePreview');
 
-var resize = function(){
-  textbox.style.height = window.getComputedStyle(preview).height;
-};
-
 document.onkeyup = debounce(200, function(){
   var markdown = textbox.value;
   var rendered = marked(markdown);
   preview.innerHTML = rendered;
   highlight();
-  resize();
 });
 
-resize();

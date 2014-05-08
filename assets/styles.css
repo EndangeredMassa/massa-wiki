@@ -17,6 +17,12 @@ body {
   margin: 26px;
 }
 
+.filePreview {
+  margin: 26px;
+  height: 546px;
+  overflow-y: auto;
+}
+
 .button-success,
 .button-error,
 .button-warning,
