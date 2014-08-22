@@ -43,7 +43,7 @@ var syncPreviewScroll = function(){
   if (textbox.scrollHeight - textbox.scrollTop - textbox.clientHeight < 40) {
     preview.scrollTop = preview.scrollHeight - preview.clientHeight;
   } else {
-    preview.scrollTop = textbox.scrollTop / textbox.scrollHeight * preview.scrollHeight;
+    preview.scrollTop = Math.round(textbox.scrollTop / textbox.scrollHeight * preview.scrollHeight);
   }
 };
 
@@ -51,7 +51,7 @@ var syncTextboxScroll = function(){
   if (preview.scrollHeight - preview.scrollTop - preview.clientHeight < 40) {
     textbox.scrollTop = textbox.scrollHeight - textbox.clientHeight;
   } else {
-    textbox.scrollTop = preview.scrollTop / preview.scrollHeight * textbox.scrollHeight;
+    textbox.scrollTop = Math.round(preview.scrollTop / preview.scrollHeight * textbox.scrollHeight);
   }
 };
 
@@ -66,7 +66,7 @@ document.onkeyup = debounce(200, function(){
 var enableTextboxOnscroll = debounce(200, function(){
   textbox.onscroll = function(){
     syncPreviewScroll();
-    // Turn of preview scroll handler temporarily to
+    // Turn off preview scroll handler temporarily to
     // prevent onscroll handlers bouncing back and forth
     preview.onscroll = function(){};
     enablePreviewOnscroll();
