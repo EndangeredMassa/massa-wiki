@@ -1,6 +1,6 @@
 {
   "name": "massa-wiki",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "src/index.coffee",
   "scripts": {
     "start": "./node_modules/.bin/coffee src/index.coffee"
